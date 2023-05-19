@@ -71,6 +71,20 @@ public class Main {
                     Monsters.blacksmith.attack(warriv);
                 }
             }
+            else if(flawia.getHealth() > 0 && Monsters.andariel.getHealth() > 0){
+                currentFighterName = flawia.getName();
+                flawia.attack(Monsters.andariel);
+                if(Monsters.andariel.getHealth() > 0){
+                    Monsters.andariel.attack(flawia);
+                }
+            }
+            else if (flawia.getHealth() > 0) {
+                currentFighterName = flawia.getName();
+                flawia.attack(Monsters.blacksmith);
+                if (Monsters.blacksmith.getHealth() > 0) {
+                    Monsters.blacksmith.attack(flawia);
+                }
+            }
             else if(seventh.getHealth() > 0 && Monsters.andariel.getHealth() > 0){
                 currentFighterName = seventh.getName();
                 seventh.attack(Monsters.andariel);
